@@ -1,0 +1,18 @@
+h1 {
+   font-size: 24px; 
+}
+
+.backbutton {
+    text-align: right;
+    margin-right: 80px;
+}
+
+hr.solid {
+    text-decoration: double;
+    color: black;
+    height: 10px;
+    background-color: black;
+    width: 1500px
+}
+
+section
