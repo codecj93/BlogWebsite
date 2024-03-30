@@ -1,7 +1,13 @@
 const toggle = document.getElementById('lightdark')
+const back = document.getElementsByClassName("backbutton")
 let currentMode = "light"
+let blogArray = JSON.parse(localStorage.getItem('blogArray'))
 
 
+
+if back.addEventListener('click', function(event)) {
+    window.location.href='index.html'
+}
 
 toggle.addEventListener('click', function () {
     console.log(currentMode)
@@ -21,13 +27,9 @@ toggle.addEventListener('click', function () {
 
 const blogArray = JSON.parse(localStorage.getItem('blogArray'))
 
+
 for(i = 0; i < blogArray.length; i++) {
-    // create a card for each blog
-    // <div class="card">
-    //     <h1>Title</h1>
-    //     <p>Content</p>
-    //     <p>Author</p>
-    // </div>
+  
 
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
@@ -36,10 +38,13 @@ for(i = 0; i < blogArray.length; i++) {
     titleH1.textContent = blogArray[i].title;
     cardDiv.append(titleH1)
 
-    // content
 
-    // author
+   
 
     document.getElementById("blog-container").append(cardDiv)
 
 }
+
+
+if back.addEventListener('click')
+    window.location.href='index.html'
